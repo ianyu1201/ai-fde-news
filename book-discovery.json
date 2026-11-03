@@ -1,0 +1,21 @@
+{
+  "purpose": "用户认可书籍是发现线索，不是每天重新发布的资讯",
+  "sources": [
+    {
+      "seed": "智能：AI时代的商业、组织与战略的本质",
+      "author": "曾鸣",
+      "publisherPage": "https://detail.youzan.com/show/goods?alias=3nfe2pshmo45an5",
+      "authorSite": "https://smartai.hupan.com/",
+      "queries": ["曾鸣 智能 新连载 组织 战略", "site:smartai.hupan.com 曾鸣 智能", "曾鸣 智能 访谈 2026"],
+      "note": "作者主题站是候选入口；逐篇确认原始链接、具体日级日期与是否只是旧文重发。"
+    },
+    {
+      "seed": "Token经济",
+      "authors": ["白惠天", "袁晓辉", "司晓"],
+      "publisherPage": "https://detail.youzan.com/show/goods?alias=278xflkurbbdrv7",
+      "queries": ["白惠天 袁晓辉 司晓 Token经济 新文章", "白惠天 Token经济 访谈", "腾讯研究院 Token经济 成本 价值"],
+      "note": "优先作者署名的原文与出版社材料；区分研究观点、采访、摘书及无来源转载。"
+    }
+  ],
+  "selectionRules": ["只收有可核实原始日级日期和实质新增观点的公开材料", "商品页和书名搜索结果只是发现线索", "作者观点不是实证结论", "旧文转载不改为转载当日新闻", "与 AI 推理 Token 无关的区块链通证内容排除"]
+}

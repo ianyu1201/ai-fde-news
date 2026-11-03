@@ -1,0 +1,18 @@
+[
+  {
+    "id": "bilibili-example",
+    "publisherId": "bilibili-example",
+    "name": "B站账号（核实后填写）",
+    "kind": "账号自述",
+    "route": "/bilibili/user/video/2267573",
+    "enabled": false
+  },
+  {
+    "id": "weibo-example",
+    "publisherId": "weibo-example",
+    "name": "微博账号（核实后填写）",
+    "kind": "账号自述",
+    "route": "/weibo/user/3306934123",
+    "enabled": false
+  }
+]

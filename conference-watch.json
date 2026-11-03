@@ -1,0 +1,18 @@
+{
+  "purpose": "协同办公大会发现线索，不是自动精选或已核实文章来源",
+  "events": [
+    {
+      "platform": "飞书 / 豆包工作",
+      "officialHub": "https://www.feishu.cn/research/event/future",
+      "eventSite": "https://future.feishu.cn/",
+      "searchTerms": ["飞书未来无限大会 新品 发布", "豆包工作开工大会 工作伙伴 权限 商业化", "飞书 发布会 ARR 客户 AI 开放平台"]
+    },
+    {
+      "platform": "阿里 / 千问办公 / 钉钉",
+      "officialHub": "https://yunqi.aliyun.com/",
+      "publisherNews": "https://ali-home.alibaba.com/",
+      "searchTerms": ["云栖大会 千问办公 企业上下文", "云栖大会 钉钉 Agent 开放平台", "云栖大会 QwenNote 企业客户 Salesforce"]
+    }
+  ],
+  "verification": "先在官方活动页确认日期和议程，再找有日级发布日期的官方发布、产品日志或原始媒体报道。大会页只写预告时不得冒充发布细节；产品、商业数字和客户效果分别标注为企业自述或已独立核验。不得仅凭含品牌名的域名认定官方，先核查所有者或官方主站反向链接。"
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "id": "openai",
+    "publisherId": "openai",
+    "name": "OpenAI",
+    "url": "https://openai.com/blog/rss.xml",
+    "kind": "官方"
+  },
+  {
+    "id": "github",
+    "publisherId": "github",
+    "name": "GitHub · AI & ML",
+    "url": "https://github.blog/ai-and-ml/feed/",
+    "kind": "官方"
+  },
+  {
+    "id": "aws",
+    "publisherId": "amazon",
+    "name": "AWS Machine Learning",
+    "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+    "kind": "官方"
+  },
+  {
+    "id": "huggingface",
+    "publisherId": "huggingface",
+    "name": "Hugging Face",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "kind": "官方/社区"
+  },
+  {
+    "id": "simon",
+    "publisherId": "simon-willison",
+    "name": "Simon Willison",
+    "url": "https://simonwillison.net/atom/everything/",
+    "kind": "实践者"
+  },
+  {
+    "id": "latent",
+    "publisherId": "latent-space",
+    "name": "Latent Space",
+    "url": "https://www.latent.space/feed",
+    "kind": "媒体/实践者"
+  },
+  {
+    "id": "pragmatic",
+    "publisherId": "pragmatic-engineer",
+    "name": "The Pragmatic Engineer",
+    "url": "https://newsletter.pragmaticengineer.com/feed",
+    "kind": "媒体/实践者"
+  },
+  {
+    "id": "qbitai",
+    "publisherId": "qbitai",
+    "name": "量子位",
+    "url": "https://www.qbitai.com/feed",
+    "kind": "媒体",
+    "region": "CN"
+  },
+  {
+    "id": "infoq-cn",
+    "publisherId": "infoq-cn",
+    "name": "InfoQ 中文",
+    "url": "https://www.infoq.cn/feed",
+    "kind": "媒体/工程实践",
+    "region": "CN"
+  },
+  {
+    "id": "sspai",
+    "publisherId": "sspai",
+    "name": "少数派",
+    "url": "https://sspai.com/feed",
+    "kind": "媒体/实践者",
+    "region": "CN"
+  },
+  {
+    "id": "xiaohui-lab-interviews",
+    "publisherId": "xiaohui-lab",
+    "name": "新可能实验室（晓辉博士）",
+    "url": "https://www.xiaoyuzhoufm.com/podcast/6999cab87b9a7c31e73f0de6",
+    "kind": "节目官方公开目录",
+    "region": "CN",
+    "track": "interviews",
+    "format": "xiaoyuzhou_catalog",
+    "podcastId": "6999cab87b9a7c31e73f0de6",
+    "expectedTitle": "新可能实验室"
+  },
+  {
+    "id": "hongshan-interviews",
+    "publisherId": "hongshan",
+    "name": "the prompt（红杉中国）",
+    "url": "https://www.xiaoyuzhoufm.com/podcast/6101a3936c68b8a230638ad8",
+    "kind": "节目官方公开目录",
+    "region": "CN",
+    "track": "interviews",
+    "format": "xiaoyuzhou_catalog",
+    "podcastId": "6101a3936c68b8a230638ad8",
+    "expectedTitle": "the prompt"
+  },
+  {
+    "id": "zhangxiaojun-interviews",
+    "publisherId": "language-is-world",
+    "name": "语言即世界（张小珺）",
+    "url": "https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962",
+    "kind": "节目官方公开目录",
+    "region": "CN",
+    "track": "interviews",
+    "format": "xiaoyuzhou_catalog",
+    "podcastId": "626b46ea9cbbf0451cf5a962",
+    "expectedTitle": "张小珺Jùn｜商业访谈录"
+  }
+]

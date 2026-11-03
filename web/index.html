@@ -1,0 +1,128 @@
+<!doctype html>
+<!--
+UI palette and timeline layout adapted with reference to AIHOT
+https://github.com/KKKKhazix/AIHOT
+Commit: 885b736dc0fd3ef3d4c9c70af2bc3a981a99ff38
+Local changes: standalone personal feed, date groups, compact controls, private Markdown export.
+
+MIT License
+
+Copyright (c) 2026 数字生命卡兹克
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="关于 AI Native 与 FDE 的个人资讯观察：追踪真实业务落地、工程实践、产品工作流与组织变化。">
+<meta name="color-scheme" content="light"><meta name="robots" content="noindex">
+<title>AI 资讯 · ianyu</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23174bff'/%3E%3Cpath d='M18 45V19h28M18 31h23' fill='none' stroke='white' stroke-width='6'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#07102e;--muted:#5f6985;--line:#dce1ef;--blue:#174bff;--paper:#f6f7ff;--soft:#eaf0ff;--green:#174bff}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}button:disabled{cursor:wait;opacity:.65}[hidden]{display:none!important}.skip{position:absolute;left:20px;top:-100px;background:#fff;padding:10px;z-index:9}.skip:focus{top:12px}.shell{width:100%;margin:0;display:grid;grid-template-columns:204px minmax(0,1fr);min-height:100vh}.rail{position:sticky;top:0;height:100vh;border-right:1px solid var(--line);padding:30px 20px;display:flex;flex-direction:column;gap:32px;background:#ffffff}.brand{font-size:27px;font-weight:750;letter-spacing:-1px;text-decoration:none}.brand i{font-style:normal;color:var(--blue)}.rail-title{font-size:11px;color:var(--muted);margin:2px 0 0}.rail-label{font-size:10px;letter-spacing:1.6px;color:var(--muted);margin:0 10px 12px}.nav{display:grid;gap:5px}.nav button{border:0;text-align:left;background:none;color:var(--muted);border-radius:8px;min-height:42px;padding:9px 11px;display:flex;justify-content:space-between;gap:8px}.nav button[aria-pressed=true]{color:var(--blue);background:#eaf0ff;font-weight:650}.nav button:hover{background:#eef1fa}.nav button span{font-size:12px;font-variant-numeric:tabular-nums}.rail-bottom{margin-top:auto;font-size:12px;color:var(--muted)}.rail-bottom a{text-decoration:none}.main{padding:28px 38px 24px;min-width:0}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.topbar h1{font-size:25px;line-height:1.3;margin:0;font-weight:650}.topbar-actions{display:flex;align-items:center;gap:16px}.topbar span{font-size:12px;color:var(--muted)}.quiet{background:transparent;border:1px solid var(--line);border-radius:7px;padding:6px 11px;min-height:34px;color:var(--muted)}.quiet:hover{border-color:var(--blue);color:var(--blue)}.toolbar{display:flex;gap:12px;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line)}.search{display:flex;align-items:center;border:1px solid transparent;background:#eef1fa;border-radius:8px;padding:0 10px;flex:1;min-width:160px;max-width:350px}.search svg{width:16px;color:var(--muted);flex-shrink:0}.search input{border:none;background:none;padding:8px;width:100%;outline:none;min-width:0;font-size:13px}.search:focus-within{border-color:var(--blue)}.controls{display:flex;gap:8px}.controls select{border:1px solid var(--line);padding:7px 9px;background:#ffffff;border-radius:7px;max-width:170px;color:#4b5676;font-size:13px}.results-label{display:flex;justify-content:space-between;gap:14px;font-size:11px;color:var(--muted);margin:15px 0 4px}.day-group{margin:0 0 18px}.day-heading{display:flex;align-items:baseline;gap:12px;padding:15px 0 12px}.day-heading h2{font-size:17px;font-weight:650;margin:0}.day-heading span{font-size:12px;color:var(--muted)}.day-items{display:grid;gap:12px;border-left:1px solid #ced6ed;margin-left:7px;padding-left:22px}.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px;transition:border-color .15s,box-shadow .15s;min-width:0}.card:before{content:"";position:absolute;left:-27px;top:24px;width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--paper)}.card:hover{border-color:#aabcfb;box-shadow:0 3px 12px #07102e08}.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11px;color:var(--muted)}.tag{color:var(--blue);font-size:11px}.tag+.tag:before{content:"/";color:#8d99b5;margin-right:8px}.category{color:var(--muted)}.score-badge{margin-left:auto;font-size:11px;color:var(--muted)}.score-badge.complete{color:var(--blue);font-variant-numeric:tabular-nums}.card-title{display:flex;gap:14px;align-items:flex-start;margin:7px 0 6px}.card h2{font-size:18px;line-height:1.55;letter-spacing:-.2px;margin:0;flex:1;overflow-wrap:anywhere}.card h2 a{text-decoration:none}.card h2 a:hover{color:var(--blue)}.bookmark{border:0;background:transparent;color:#687592;width:32px;height:32px;flex-shrink:0;border-radius:7px;display:grid;place-items:center;margin-top:-2px}.bookmark:hover,.bookmark[aria-pressed=true]{color:var(--blue);background:var(--soft)}.bookmark svg{width:16px}.summary{font-size:14px;line-height:1.75;color:#4d5876;margin:0}.card-footer{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:11px;font-size:11px;color:var(--muted)}.card-footer>a{color:var(--blue);text-decoration:none;margin-left:auto;white-space:nowrap}.download{border:0;background:none;padding:0;color:var(--blue);font-size:11px;min-height:28px}.card details{font-size:12px;color:var(--muted);margin-top:7px}.card summary{cursor:pointer;width:fit-content;padding:3px 0}.card details[open]{border-top:1px solid var(--line);padding-top:7px}.card details p{margin:7px 0;overflow-wrap:anywhere}.card details a{color:var(--blue)}.reports-list{padding-left:18px}.empty{padding:45px 20px;text-align:center;color:var(--muted)}.empty h2{font-size:18px;color:var(--ink)}.empty p{font-size:13px}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.footer .quiet{font-size:11px}.status-note{font-size:12px;color:#795b25;background:#fff5df;border:1px solid #eee0bc;padding:8px 12px;border-radius:7px;margin-bottom:14px}.attention{border:1px solid var(--line);border-radius:9px;background:#edf1ff;padding:12px 16px;margin-bottom:18px}.attention h2{font-size:13px;margin:0}.attention ol{margin:6px 0 0;padding-left:20px}.attention li{padding:4px 0;font-size:12px}.attention a{text-decoration:none}.attention small{color:var(--muted);margin-left:8px}dialog{border:1px solid var(--line);border-radius:14px;max-width:580px;width:calc(100% - 32px);max-height:85vh;padding:24px;color:var(--ink);box-shadow:0 24px 80px #0002}dialog::backdrop{background:#07102e66}dialog h2{font-size:20px;margin:0 0 14px}.dialog-head{display:flex;justify-content:space-between;gap:15px}.dialog-head button{align-self:flex-start}dialog p,dialog li{font-size:13px;color:#4d5876}dialog .source-row{border-top:1px solid var(--line);padding:9px 0;display:flex;justify-content:space-between;gap:12px;font-size:13px}dialog .source-row span{color:var(--muted);font-size:12px}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#07102e;color:white;padding:11px 17px;border-radius:8px;font-size:13px;z-index:5;width:max-content;max-width:calc(100% - 32px)}.toast:empty{display:none}noscript{display:block;padding:24px;background:#fff4d9}
+@media(max-width:1000px){.shell{grid-template-columns:174px minmax(0,1fr)}.rail{padding:25px 14px}.main{padding:26px 24px}.topbar-actions span{display:none}.toolbar{flex-wrap:wrap}.search{max-width:none}.card{padding:15px 17px}}
+@media(max-width:650px){.shell{display:block}.rail{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:16px 18px 10px;gap:15px}.rail-brand{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{font-size:23px}.rail-label,.rail-bottom{display:none}.nav{display:flex;gap:3px}.nav button{font-size:12px;white-space:nowrap;padding:7px 9px;min-height:36px}.nav button span{display:none}.main{padding:20px 16px}.topbar{margin-bottom:17px}.topbar h1{font-size:22px}.topbar .quiet{font-size:12px}.toolbar{gap:9px;padding-bottom:14px}.controls{width:100%}.controls select{flex:1;max-width:none}.search{width:100%}.results-label{font-size:10px}.day-heading{background:#e9edfa;margin:12px -16px 0;padding:8px 16px}.day-heading h2{font-size:14px}.day-heading span{font-size:11px}.day-items{margin:0;padding:0;border:0;gap:0}.card{border:0;border-bottom:1px solid var(--line);background:transparent;border-radius:0;padding:17px 0}.card:before{display:none}.card:hover{box-shadow:none}.card h2{font-size:17px}.summary{font-size:13px}.meta{gap:6px;font-size:10px}.tag,.score-badge{font-size:10px}.card-footer{gap:10px}.card-footer>a{margin-left:0}.attention{margin-bottom:14px}.footer{margin-top:18px}.day-group{margin-bottom:8px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ianyu.art brand: navy #07102e, blue #174bff, signal #b9ff43. */
+.rail{background:#07102e;color:#f6f7ff;border-color:#152151}
+.brand i{color:#b9ff43}.rail-title,.rail-bottom,.nav button{color:#b7c1df}
+.nav button[aria-pressed=true]{background:#b9ff43;color:#07102e}
+.nav button:hover{background:#152151;color:#f6f7ff}
+.nav button[aria-pressed=true]:hover{background:#c8ff70;color:#07102e}
+.rail a:focus-visible,.rail button:focus-visible{outline-color:#b9ff43}
+.rail-bottom a:hover{color:#b9ff43}.topbar,.footer{justify-content:flex-end}
+.card:hover{box-shadow:0 3px 12px #07102e08}
+
+.reading-title{font-size:17px;margin:12px 0}.reading-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:24px}.reading-cards .card:before{display:none}.reading-cards .card{display:flex;flex-direction:column}.reading-cards .card-footer{margin-top:auto;padding-top:14px}.reading-cards .card h2{font-size:17px}.reading-cards .summary{font-size:13px}.reading-cards .score-badge{color:#4b5676}.topbar{margin-bottom:12px}
+@media(max-width:1100px){.reading-cards{grid-template-columns:1fr}.reading-cards .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px}.reading-cards .card-footer{margin-top:10px}}
+.insight{font-size:13px;line-height:1.75;margin:8px 0}.content-note{font-size:11px;color:var(--muted);margin:6px 0}@media(max-width:650px){.nav{flex-wrap:wrap}.nav button{flex:0 0 calc(33.333% - 3px);justify-content:center}}
+.score-signal{margin-left:auto;margin-top:0;position:relative;color:var(--blue);flex-shrink:0}.card .score-signal summary{list-style:none;display:flex;align-items:center;gap:7px;padding:4px 0;font-size:11px;white-space:nowrap}.score-signal summary::-webkit-details-marker{display:none}.card .score-signal[open]{border:0;padding:0}.signal-bars{display:flex;align-items:flex-end;gap:3px;height:17px}.signal-bars i{display:block;width:4px;height:5px;background:#e0e5f0}.signal-bars i:nth-child(2){height:8px}.signal-bars i:nth-child(3){height:11px}.signal-bars i:nth-child(4){height:14px}.signal-bars i:nth-child(5){height:17px}.signal-bars i.lit{background:var(--blue)}.signal-label{font-weight:600}.score-panel{position:absolute;right:0;top:30px;z-index:3;width:245px;border:1px solid var(--line);background:#fff;padding:16px;box-shadow:0 8px 25px #07102e18;border-radius:4px;color:var(--muted)}.score-panel strong{display:block;font-size:26px;line-height:1.2;color:var(--ink);font-variant-numeric:tabular-nums}.score-panel>span{font-size:11px}.card .score-panel p{font-size:11px;line-height:1.6;margin:8px 0 0}.score-pending{margin-left:auto;color:var(--muted);font-size:11px}@media(max-width:650px){.score-panel{width:220px}.signal-bars{height:15px}.signal-label{font-size:10px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#articles">跳到资讯列表</a>
+<div class="shell">
+ <aside class="rail" aria-label="主题导航">
+  <div class="rail-brand"><a class="brand" href="./" aria-label="资讯首页">ianyu<i>.</i></a></div>
+  <div><nav class="nav" aria-label="资讯主题"><button data-theme="all" aria-pressed="true">全部精选<span id="all-count">0</span></button><button data-theme="AI Native" aria-pressed="false">AI Native<span id="native-count">0</span></button><button data-theme="FDE" aria-pressed="false">FDE<span id="fde-count">0</span></button><button data-theme="协同办公" aria-pressed="false">协同办公<span id="office-count">0</span></button><button data-theme="访谈" aria-pressed="false">访谈精选<span id="interview-count">0</span></button></nav></div>
+  <div class="rail-bottom"><a href="https://ianyu.art/" target="_blank" rel="noopener noreferrer">个人主页</a></div>
+ </aside>
+ <main class="main" aria-label="AI Native / FDE 资讯">
+  <section class="attention" aria-labelledby="attention-title" hidden><h2 id="attention-title">信源热度</h2><ol id="hot-list"></ol></section>
+  <div id="status-note" class="status-note" hidden></div>
+  <div class="toolbar"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" aria-label="搜索资讯" placeholder="搜索主题、关键词或来源…"></label><div class="controls"><select id="category" aria-label="内容分类"><option value="all">所有内容类型</option><option>工程实践</option><option>业务落地</option><option>产品与工作流</option><option>组织与商业</option><option>访谈与洞见</option></select><select id="period" aria-label="时间范围"><option value="since-july">7 月起</option><option value="30">近 30 天</option><option value="7">近 7 天</option><option value="all">全部时间</option></select></div></div>
+  <section id="articles" class="cards" aria-label="精选资讯" tabindex="-1"></section>
+  <footer class="footer"><button id="sources-open" class="quiet">信源与方法</button></footer>
+ </main>
+</div>
+<dialog id="sources-dialog" aria-labelledby="sources-title"><div class="dialog-head"><h2 id="sources-title">信源与方法</h2><button class="quiet" data-close="sources-dialog">关闭</button></div><p>个人精选，覆盖下列公开信源；不代表全网实时监测。资讯经过来源核对及独立双评，均分达到75分才发布。本地个人网页与线上使用同一份内容。</p><div id="source-list"></div><p>事件归组：<span id="grouping-method"></span>。相似度用于召回候选，核对关系后才归组。</p><p>热度按过去 48 小时、24 小时半衰计算，同源事件只计一次，至少两个独立来源入榜。热度与精选分别判断。卡片信号表示双评分的个人阅读参考价值：按60、70、80、90分四个阈值划分1–5格；点击信号可查看两份分数，评分尚未按个人样本校准。协同办公侧重产品、工作流与行业信号；深度内容侧重解释与实践，均须独立双评达到75分。</p><p>需要伴读时，可将原文链接交给 AI 处理。</p></dialog>
+<noscript>此页面需要 JavaScript 显示资讯和本地筛选。可下载同目录的 news.json 查看结构化结果。</noscript>
+<script>
+'use strict';
+const DATA=/*__DATA__*/null;
+const $=s=>document.querySelector(s);
+let activeTheme='all';
+const format=(date,options)=>date?new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',...options}).format(new Date(date)):'尚未整理';
+const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
+function link(text,url){const n=el('a','',text);n.href=url;n.target='_blank';n.rel='noopener noreferrer';return n;}
+function counts(){const entries=DATA.items;$('#all-count').textContent=entries.length;$('#native-count').textContent=entries.filter(i=>i.themes.includes('AI Native')).length;$('#fde-count').textContent=entries.filter(i=>i.themes.includes('FDE')).length;$('#office-count').textContent=entries.filter(i=>i.themes.includes('协同办公')).length;$('#interview-count').textContent=entries.filter(i=>i.themes.includes('访谈')).length;}
+function scoreSignal(item){
+ const score=item.score;
+ if(score?.status!=='double')throw new Error('公开资讯缺少独立双评');
+ const value=Number(score.average),level=value>=90?5:value>=80?4:value>=70?3:value>=60?2:1;
+ const labels=['','低','偏低','中等','较高','高'];
+ const detail=el('details','score-signal'),summary=el('summary','');
+ summary.setAttribute('aria-label',`阅读价值 ${labels[level]}，信号 ${level}/5，双评均分 ${value}，查看评分`);
+ const bars=el('span','signal-bars');bars.setAttribute('aria-hidden','true');
+ for(let n=1;n<=5;n++){const bar=el('i',n<=level?'lit':'');bars.append(bar);}
+ summary.append(bars,el('span','signal-label',labels[level]));
+ const panel=el('div','score-panel');panel.append(el('strong','',String(value)),el('span','','双评均分 · 100 分制'),el('p','',`独立评审 A ${score.scores[0]} · B ${score.scores[1]}`),el('p','','信号表示个人阅读参考价值，不表示事实可信度或传播热度。'));
+ if(score.profileLabel)panel.insertBefore(el('p','',`评分侧重：${score.profileLabel}`),panel.querySelector('p'));
+ detail.append(summary,panel);return detail;
+}
+function card(item){
+ const article=el('article','card');article.dataset.id=item.id;
+ const meta=el('div','meta');item.themes.forEach(t=>meta.append(el('span',t==='FDE'?'tag fde':'tag',t)));meta.append(el('span','category',item.category));meta.append(scoreSignal(item));article.append(meta);
+ const title=el('div','card-title'),h=el('h2');h.append(link(item.title,item.url));title.append(h);
+ article.append(title,el('p','summary',item.summary));
+ const footer=el('div','card-footer');footer.append(el('span','',item.source));
+ const time=el('time','',(item.claimType?'发布 ':'')+format(item.publishedAt,{month:'2-digit',day:'2-digit'}));time.dateTime=item.publishedAt;footer.append(time);
+ article.append(footer);return article;
+}
+function dayKey(date){return format(date,{year:'numeric',month:'2-digit',day:'2-digit'});}
+function render(){const query=$('#search').value.trim().toLocaleLowerCase(),category=$('#category').value,period=$('#period').value;
+ const cutoff=period==='all'?0:period==='since-july'?new Date('2026-07-01T00:00:00+08:00').getTime():Date.now()-Number(period)*86400000;
+ const filtered=DATA.items.filter(i=>(activeTheme==='all'||i.themes.includes(activeTheme))&&(category==='all'||i.category===category)&&new Date(i.publishedAt).getTime()>=cutoff&&(!query||[i.title,i.originalTitle,i.summary,i.why,i.source,...i.themes].join(' ').toLocaleLowerCase().includes(query)));
+ filtered.sort((a,b)=>new Date(b.publishedAt)-new Date(a.publishedAt));
+ const container=$('#articles');container.replaceChildren();if(!filtered.length){const empty=el('div','empty');empty.append(el('h2','',DATA.items.length?'没有符合条件的资讯':'还没有完成整理的资讯'),el('p','',DATA.items.length?'试试其他关键词或选择“全部时间”。':'采集完成后，由 Codex 核对候选内容，再生成这一页。'));const reset=el('button','quiet','清除筛选');reset.onclick=()=>{$('#search').value='';$('#category').value='all';$('#period').value='since-july';setTheme('all');};empty.append(reset);container.append(empty);}else{const groups=new Map();filtered.forEach(item=>{const day=dayKey(item.publishedAt);if(!groups.has(day))groups.set(day,[]);groups.get(day).push(item);});groups.forEach((items,day)=>{const section=el('section','day-group');section.setAttribute('aria-label',day);const heading=el('div','day-heading');heading.append(el('h2','',format(items[0].publishedAt,{month:'long',day:'numeric'})),el('span','',format(items[0].publishedAt,{weekday:'long'})+' · '+items.length+' 条'));const list=el('div','day-items');items.forEach(item=>list.append(card(item)));section.append(heading,list);container.append(section);});}
+}
+const periodByTheme={};
+function setTheme(theme){periodByTheme[activeTheme]=$('#period').value;$('#period').value=periodByTheme[theme]||(theme==='访谈'?'all':'since-july');activeTheme=theme;document.querySelectorAll('[data-theme]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.theme===theme)));render();}
+document.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.theme)));
+$('#search').addEventListener('input',render);$('#category').addEventListener('change',render);$('#period').addEventListener('change',render);
+$('#sources-open').onclick=()=>$('#sources-dialog').showModal();document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.close).close());
+counts();
+const failed=DATA.sources.filter(s=>s.status!=='ok');const stale=DATA.collectedAt&&Date.now()-new Date(DATA.collectedAt).getTime()>36*3600000;
+if(failed.length||stale){const messages=[];if(failed.length)messages.push(`${failed.length} 个信源采集失败，仍保留之前已整理的内容。`);if(stale)messages.push('已超过 36 小时未采集，当前显示上次更新的结果。');$('#status-note').hidden=false;$('#status-note').textContent=messages.join(' ');}
+DATA.sources.forEach(s=>{const row=el('div','source-row');row.append(link(s.name,s.url),el('span','',s.status==='ok'?'采集正常':'本轮失败'));$('#source-list').append(row);});render();
+$('#grouping-method').textContent=DATA.groupingMode||'词面候选召回 + 人工关系确认';
+if(DATA.hot?.length){$('.attention').hidden=false;DATA.hot.forEach(h=>{const li=el('li');const item=DATA.items.find(i=>i.id===h.representativeId);li.append(link(h.title,item?.url||'#'),el('small','',`${h.participants} 个独立来源 · 热度 ${h.heat}`+(typeof h.dailyChange==='number'?` · 较上次日级快照 ${h.dailyChange>=0?'+':''}${h.dailyChange}`:'')));$('#hot-list').append(li);});}
+</script>
+</body></html>

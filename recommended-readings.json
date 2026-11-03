@@ -1,0 +1,53 @@
+[
+  {
+    "id": "reading-smart-ai-zeng-ming",
+    "title": "智能：AI时代的商业、组织与战略的本质",
+    "source": "曾鸣 · 中信出版集团",
+    "url": "https://book.douban.com/subject/38553944/",
+    "summary": "从第一性原理讨论 AI 对经济、商业、组织与战略的影响，关注智能成为基础设施后企业运行方式的变化。简介据公开出版信息，未作全书评审。",
+    "themes": [
+      "AI Native"
+    ],
+    "kind": "书籍",
+    "dateLabel": "2026年7月出版",
+    "evidence": [
+      "https://smartai.hupan.com/",
+      "https://ireader.com.cn/index.php?bid=13692452&ca=Chapter.Content&cid=1"
+    ],
+    "approvedBy": "user"
+  },
+  {
+    "id": "reading-token-economy",
+    "title": "Token经济",
+    "source": "白惠天、袁晓辉、司晓 · 中信出版集团",
+    "url": "https://weread.qq.com/web/reader/69c32d90813abc17cg019c83",
+    "summary": "以 Token 为线索，讨论可计量的智力服务及其价值、成本、需求、竞争与商业影响。简介据中信版公开出版信息，微信读书链接的具体版本待核实。",
+    "themes": [
+      "AI Native",
+      "FDE"
+    ],
+    "kind": "书籍",
+    "dateLabel": "2026年8月出版（中信版）",
+    "evidence": [
+      "https://detail.youzan.com/show/goods?alias=278xflkurbbdrv7&from_source=gbox_seo"
+    ],
+    "approvedBy": "user"
+  },
+  {
+    "id": "reading-alibaba-ai-native-handbook",
+    "title": "AI Native 研发范式实践手册",
+    "source": "阿里巴巴 · 官方在线阅读页",
+    "url": "https://ai-native.alistatic.com/app/ainativeinfra/ai-native-handbook-web/index",
+    "summary": "关注 AI Native 研发范式的实践材料。官方页面提供 68 页在线阅读；本次已核实公开入口，尚未通读全文。",
+    "themes": [
+      "AI Native",
+      "FDE"
+    ],
+    "kind": "手册",
+    "dateLabel": "日期待核实",
+    "evidence": [
+      "https://ai-native.alistatic.com/app/ainativeinfra/ai-native-handbook-web/index"
+    ],
+    "approvedBy": "user"
+  }
+]

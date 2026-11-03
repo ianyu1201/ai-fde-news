@@ -1,0 +1,111 @@
+{
+  "version": "2026-10-10-domestic-first",
+  "purpose": "以用户明确喜欢的材料作为正向样本，持续发现相近深度内容，而非只陈列三份种子链接。",
+  "positiveExamples": [
+    {
+      "title": "智能：AI时代的商业、组织与战略的本质",
+      "author": "曾鸣",
+      "interests": [
+        "AI时代商业与组织重构",
+        "战略与经济机制",
+        "系统性解释"
+      ]
+    },
+    {
+      "title": "Token经济",
+      "interests": [
+        "AI成本与价值",
+        "智力服务的计量与定价",
+        "商业模式与竞争"
+      ]
+    },
+    {
+      "title": "AI Native 研发范式实践手册",
+      "interests": [
+        "研发流程重构",
+        "工程实践与方法论",
+        "团队协作、评测与治理"
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "name": "研发范式与工程方法",
+      "queries": [
+        "AI Native 研发 实践手册 方法论",
+        "AI native software engineering playbook report"
+      ],
+      "terms": [
+        "研发范式",
+        "研发效能",
+        "实践手册",
+        "engineering playbook",
+        "agentic engineering",
+        "software engineering"
+      ]
+    },
+    {
+      "name": "组织与战略",
+      "queries": [
+        "AI 原生 组织 战略 商业模式 研究",
+        "AI native operating model organizational transformation report"
+      ],
+      "terms": [
+        "组织变革",
+        "商业模式",
+        "战略",
+        "operating model",
+        "organizational",
+        "transformation"
+      ]
+    },
+    {
+      "name": "成本与价值",
+      "queries": [
+        "Token 经济 AI 成本 价值 报告",
+        "AI economics cost per outcome token economics research"
+      ],
+      "terms": [
+        "token经济",
+        "token 经济",
+        "成本治理",
+        "经济",
+        "economics",
+        "cost per",
+        "roi",
+        "pricing"
+      ]
+    },
+    {
+      "name": "FDE前线交付",
+      "queries": [
+        "FDE 落地 复用 案例 报告",
+        "forward deployed engineering production case study"
+      ],
+      "terms": [
+        "fde",
+        "forward deployed",
+        "落地",
+        "复用",
+        "production case"
+      ]
+    }
+  ],
+  "preferredFormats": [
+    "系统性手册",
+    "研究报告",
+    "作者深度长文",
+    "书籍与公开样章",
+    "带方法和边界的实战复盘"
+  ],
+  "rules": [
+    "内容主题和解释力优先，不要求标题含AI Native或FDE",
+    "区分AI推理Token与无关区块链通证经济",
+    "不因知名作者或厂商名自动高分",
+    "书籍观点与实测结果分别表述；不能把出版介绍当作全文已读",
+    "热门和新鲜度不能替代个人价值，不强凑每日数量",
+    "用户认可材料是偏好样本，不等于独立事实验证",
+    "新增资讯与长期沉淀以中国企业、中国市场及国内研究者的实践为主；优先核查国内候选，海外只作具有明确可迁移价值的补充；中文报道不等于国内事件。地域偏好影响发现预算和编辑取舍，不按国别抬分或修改历史双评",
+    "访谈限AI、商业、金融、市场、书籍等主题，排除娱乐、明星与体育生涯；重点节目是新可能实验室、红杉中国the prompt和语言即世界"
+  ]
+}

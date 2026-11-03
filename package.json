@@ -1,0 +1,10 @@
+{
+  "name": "ianyu-local-news-embeddings",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "description": "Optional local ONNX candidate recall; no model API",
+  "dependencies": {
+    "@huggingface/transformers": "4.3.0"
+  }
+}

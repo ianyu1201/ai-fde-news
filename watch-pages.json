@@ -1,0 +1,5 @@
+[
+  {"id":"feishu-updates","name":"飞书产品更新","url":"https://www.feishu.cn/product/updates","enabled":false},
+  {"id":"dingtalk-open","name":"钉钉开放平台","url":"https://open.dingtalk.com/","enabled":false},
+  {"id":"workbuddy-official","name":"腾讯 WorkBuddy 官方页","url":"https://cloud.tencent.com/act/pro/workbuddy","enabled":false}
+]
